@@ -1,0 +1,10 @@
+create a database for a small corporation with a list of employees of different departments like hr, sales, accounts, managers and developers.
+create the fields like first name, last name, DOB, age, address, emp salary, bonus and developers.
+create a table with the list of departments and apply foreign key 
+
+1. use the aggregate function to find the employee with the minimum and maximum salary.
+2. use case statement and find the employees within a certain range.
+3. find the employees name whose fname is mahak
+4. create a colummn in the table that has full name of the employee.
+5. get the list of employees from the HR and sales deptt.
+6. create a column that gets the total salary of the employee.
