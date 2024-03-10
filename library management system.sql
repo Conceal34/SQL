@@ -6,7 +6,7 @@ create table books (
   author_id varchar(100),
   qty int,
   primary key (book_id),
-  foreign key author_id references authors(author_id)
+  foreign key (author_id) references authors(author_id)
 );
 
 create table authors (
