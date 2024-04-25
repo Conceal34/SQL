@@ -1,6 +1,6 @@
 CREATE TABLE Employeeinfo (
   EmpID int Primary Key,
-  EmpFname text,
+  EmpFname varchar(50),
   EmpLname text,
   Department text,
   Project varchar(10),
@@ -47,4 +47,27 @@ select * from EmployeePosition where Salary >= 150000;
 -- 6th query
 Select EmpPosition ,sum(Salary) from EmployeePosition group by EmpPosition;
 -- 7th query
-Select * from EmployeePosition order by Salary desc limit 2,1;
+Select * from EmployeePosition order by Salary limit 2,1;
+
+-- now statement
+select now();
+-- index
+create index idx_empName on Employeeinfo(EmpFname);
+drop index idx_empName on Employeeinfo;
+-- concat
+select EmpID, concat(EmpFname, ' ', EmpLname) as 'Name', Department, Project
+from Employeeinfo;
+-- combining aggregate
+select count(*) as total_emp,
+  avg(Salary) as avg_salary,
+  max(Salary) as max_salary
+from EmployeePosition;  
+
+-- case statement
+select EmpPosition,
+  case
+    when Salary > 150000 then 'High Salary'
+    when Salary < 100000 then 'low Salary'
+    else 'Mid salary'
+  end as Salary_category  
+from EmployeePosition;
